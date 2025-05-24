@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - College Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex h-screen overflow-hidden">
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="bg-blue-700 text-white w-64 space-y-6 py-7 px-4 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-200 ease-in-out z-30">
+    <h1 class="text-2xl font-bold text-center">Admin Portal</h1>
+    <nav>
+      <a href="admin-dashboard.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Dashboard</a>
+      <a href="manage-students.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Manage Students</a>
+      <a href="manage-teachers.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Manage Teachers</a>
+      <a href="manage-announcements.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Manage Announcements</a>
+      <a href="manage-sections.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Manage Sections</a>
+      <a href="manage-timetable.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Manage Timetable</a>
+      <a href="manage-enrollments.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Manage Enrollments</a>
+      <a href="manage-grades.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Manage Grades</a>
+      <a href="settings.html" class="block py-2.5 px-4 rounded hover:bg-blue-600 transition">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <div class="flex-1 flex flex-col overflow-auto">
+    <!-- Top Navbar -->
+    <header class="flex items-center justify-between bg-white shadow px-6 py-4">
+      <button id="menuBtn" class="md:hidden text-blue-700 focus:outline-none" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" >
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <h2 class="text-xl font-semibold text-gray-700">Dashboard</h2>
+      <div class="flex items-center space-x-4">
+        <span class="hidden md:block text-gray-600">Admin Name</span>
+        <img src="https://i.pravatar.cc/40" alt="Admin Profile" class="w-10 h-10 rounded-full object-cover" />
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-1 p-6 space-y-6 overflow-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="manage-students.html" class="block bg-white rounded-lg shadow p-5 hover:shadow-lg transition cursor-pointer">
+          <h3 class="text-lg font-semibold mb-2">Total Students</h3>
+          <p class="text-3xl font-bold text-blue-600">1,250</p>
+        </a>
+        <a href="manage-teachers.html" class="block bg-white rounded-lg shadow p-5 hover:shadow-lg transition cursor-pointer">
+          <h3 class="text-lg font-semibold mb-2">Total Teachers</h3>
+          <p class="text-3xl font-bold text-blue-600">85</p>
+        </a>
+        <a href="manage-announcements.html" class="block bg-white rounded-lg shadow p-5 hover:shadow-lg transition cursor-pointer">
+          <h3 class="text-lg font-semibold mb-2">Announcements</h3>
+          <p class="text-3xl font-bold text-blue-600">12</p>
+        </a>
+
+        <a href="manage-sections.html" class="block bg-white rounded-lg shadow p-5 hover:shadow-lg transition cursor-pointer">
+          <h3 class="text-lg font-semibold mb-2">Manage Sections</h3>
+          <p class="text-3xl font-bold text-blue-600">25</p>
+        </a>
+        <a href="manage-timetable.html" class="block bg-white rounded-lg shadow p-5 hover:shadow-lg transition cursor-pointer">
+          <h3 class="text-lg font-semibold mb-2">Manage Timetable</h3>
+          <p class="text-3xl font-bold text-blue-600">Weekly Schedule</p>
+        </a>
+        <a href="manage-enrollments.html" class="block bg-white rounded-lg shadow p-5 hover:shadow-lg transition cursor-pointer">
+          <h3 class="text-lg font-semibold mb-2">Manage Enrollments</h3>
+          <p class="text-3xl font-bold text-blue-600">450</p>
+        </a>
+
+        <a href="manage-grades.html" class="block bg-white rounded-lg shadow p-5 hover:shadow-lg transition cursor-pointer">
+          <h3 class="text-lg font-semibold mb-2">Manage Grades</h3>
+          <p class="text-3xl font-bold text-blue-600">Grade Records</p>
+        </a>
+      </div>
+
+      <section class="bg-white rounded-lg shadow p-6">
+        <h3 class="text-xl font-semibold mb-4">Recent Activity</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>
+            <a href="manage-students.html" class="hover:text-blue-600 hover:underline cursor-pointer block">
+              New student registration: Juan Dela Cruz
+            </a>
+          </li>
+          <li>
+            <a href="manage-announcements.html" class="hover:text-blue-600 hover:underline cursor-pointer block">
+              Announcement posted: Spring Semester Dates
+            </a>
+          </li>
+          <li>
+            <a href="manage-teachers.html" class="hover:text-blue-600 hover:underline cursor-pointer block">
+              Teacher account updated: Mrs. Smith
+            </a>
+          </li>
+          <li>
+            <a href="manage-grades.html" class="hover:text-blue-600 hover:underline cursor-pointer block">
+              Grade added: Jane Doe - Physics
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const menuBtn = document.getElementById('menuBtn');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+
+</body>
+</html>

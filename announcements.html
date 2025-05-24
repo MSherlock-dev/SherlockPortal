@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Announcements - Student Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside id="sidebar" 
+    class="bg-blue-600 text-white w-64 p-6 space-y-4 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 md:relative transition-transform duration-300 ease-in-out z-20">
+    <h2 class="text-2xl font-bold mb-6">Student Portal</h2>
+    <nav class="space-y-2">
+      <a href="dashboard.html" class="block py-2 px-3 rounded hover:bg-blue-500">Dashboard</a>
+      <a href="announcements.html" class="block py-2 px-3 rounded bg-blue-700 font-semibold">Announcements</a>
+      <a href="enrollment.html" class="block py-2 px-3 rounded hover:bg-blue-500">Enrollment</a>
+      <a href="timetable.html" class="block py-2 px-3 rounded hover:bg-blue-500">Timetable</a>
+      <a href="grades.html" class="block py-2 px-3 rounded hover:bg-blue-500">Grades</a>
+      <!-- Student Account Dropdown -->
+      <div class="group relative">
+        <button class="block py-2 px-3 rounded hover:bg-blue-500 w-full text-left">Student Account</button>
+        <div class="absolute bg-white text-black mt-1 left-0 shadow-md rounded hidden group-hover:block z-10 w-48">
+          <div class="px-4 py-2 border-b">
+            <strong>Juan Dela Cruz</strong><br>
+            <span class="text-sm text-gray-600">BSCS 2-B</span>
+          </div>
+          <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">View Profile</a>
+          <a href="edit-profile.html" class="block px-4 py-2 hover:bg-gray-100">Edit Profile</a>
+        </div>
+      </div>
+      <a href="index.html" class="block bg-white text-blue-600 px-3 py-2 rounded hover:bg-gray-100 mt-2">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 ml-0 md:ml-64 flex flex-col min-h-screen">
+    <!-- Mobile Header -->
+    <div class="md:hidden flex items-center justify-between bg-blue-600 text-white px-4 py-3 shadow-md">
+      <h1 class="text-xl font-bold">Announcements</h1>
+      <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')" class="text-white focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Page Content -->
+    <main class="p-6 space-y-6 max-w-4xl mx-auto flex-grow">
+      <h2 class="text-3xl font-bold text-blue-700 text-center">Latest Announcements</h2>
+
+      <!-- Announcement Items -->
+      <section class="bg-white p-6 rounded shadow flex items-start space-x-6">
+        <img 
+          src="https://randomuser.me/api/portraits/men/32.jpg" 
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/80?text=No+Image';" 
+          class="min-w-[5rem] w-20 h-20 rounded-full object-cover border-4 border-blue-500 shadow flex-shrink-0" 
+          alt="Announcer Photo"
+        >
+        <div>
+          <h3 class="text-xl font-semibold text-blue-600">Midterm Exam Schedule Released</h3>
+          <p class="text-gray-700 text-sm mt-1">Posted by Prof. Santos on May 20, 2025</p>
+          <p class="text-gray-800 mt-2">All students are advised to check their exam schedules posted on the Timetable page. Be punctual and bring your school ID.</p>
+        </div>
+      </section>
+
+      <section class="bg-white p-6 rounded shadow flex items-start space-x-6">
+        <img 
+          src="https://randomuser.me/api/portraits/women/44.jpg" 
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/80?text=No+Image';" 
+          class="min-w-[5rem] w-20 h-20 rounded-full object-cover border-4 border-blue-500 shadow flex-shrink-0" 
+          alt="Announcer Photo"
+        >
+        <div>
+          <h3 class="text-xl font-semibold text-blue-600">Holiday on June 12</h3>
+          <p class="text-gray-700 text-sm mt-1">Posted by Dean Reyes on May 18, 2025</p>
+          <p class="text-gray-800 mt-2">In observance of Independence Day, there will be no classes on June 12, 2025. Enjoy the holiday responsibly.</p>
+        </div>
+      </section>
+
+      <section class="bg-white p-6 rounded shadow flex items-start space-x-6">
+        <img 
+          src="https://randomuser.me/api/portraits/men/85.jpg" 
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/80?text=No+Image';" 
+          class="min-w-[5rem] w-20 h-20 rounded-full object-cover border-4 border-blue-500 shadow flex-shrink-0" 
+          alt="Announcer Photo"
+        >
+        <div>
+          <h3 class="text-xl font-semibold text-blue-600">Campus Clean-Up Drive</h3>
+          <p class="text-gray-700 text-sm mt-1">Posted by Ms. Dela Peña on May 15, 2025</p>
+          <p class="text-gray-800 mt-2">Join us this weekend for a campus clean-up activity. Volunteers will receive community service credits. Meet at the main gate at 8 AM.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 shadow mt-auto">
+      &copy; 2025 College Name. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>

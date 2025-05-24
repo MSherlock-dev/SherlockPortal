@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Student Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex">
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-blue-700 text-white shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-30">
+    <div class="p-6 flex flex-col h-full">
+      <h2 class="text-2xl font-bold mb-8">Student Portal</h2>
+      <nav class="flex flex-col space-y-4 flex-grow">
+        <a href="dashboard.html" class="py-2 px-4 rounded bg-blue-900 font-semibold">Dashboard</a>
+        <a href="announcements.html" class="py-2 px-4 rounded hover:bg-blue-800">Announcements</a>
+        <a href="enrollment.html" class="py-2 px-4 rounded hover:bg-blue-800">Enrollment</a>
+        <a href="timetable.html" class="py-2 px-4 rounded hover:bg-blue-800">Timetable</a>
+        <a href="grades.html" class="py-2 px-4 rounded hover:bg-blue-800">Grades</a>
+      </nav>
+      <div class="mt-auto pt-6 border-t border-blue-600">
+        <div class="flex items-center space-x-3">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile" class="w-12 h-12 rounded-full border-2 border-white object-cover" />
+          <div>
+            <p class="font-semibold">Juan Dela Cruz</p>
+            <p class="text-sm text-blue-300">BSCS 2-B</p>
+          </div>
+        </div>
+        <a href="index.html" class="block mt-4 bg-white text-blue-700 text-center py-2 rounded hover:bg-gray-100 font-semibold">Logout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="flex flex-col flex-1 min-h-screen md:ml-64">
+
+    <!-- Top Navbar -->
+    <header class="bg-blue-600 text-white flex items-center justify-between px-4 py-3 shadow-md md:hidden">
+      <button id="sidebarToggle" class="text-white focus:outline-none">
+        <!-- Hamburger icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <h1 class="text-xl font-bold">Student Portal</h1>
+      <div></div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="flex-grow p-6 max-w-6xl mx-auto space-y-8">
+      <h2 class="text-3xl font-bold text-blue-700 text-center">Welcome, Juan Dela Cruz</h2>
+
+      <!-- Profile Section -->
+      <section class="bg-white p-6 rounded shadow flex flex-col md:flex-row md:items-start md:space-x-10">
+
+        <!-- Profile Picture -->
+        <div class="flex flex-col items-center mb-6 md:mb-0">
+          <img
+            src="https://randomuser.me/api/portraits/men/75.jpg"
+            alt="Profile Picture"
+            class="rounded-full w-32 h-32 object-cover border-4 border-blue-500 shadow"
+            onerror="this.onerror=null; this.src='https://via.placeholder.com/150?text=No+Image';"
+          />
+          <p class="mt-2 text-gray-600 text-sm">Student ID: 20251234</p>
+        </div>
+
+        <!-- Completion + Info -->
+        <div class="flex-1 flex flex-col md:flex-row md:space-x-10">
+          <!-- Completion Circle -->
+          <div class="relative w-36 h-36 mb-6 md:mb-0">
+            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+              <path class="text-gray-200" stroke="currentColor" stroke-width="4" fill="none"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="text-green-500" stroke="currentColor" stroke-width="4" stroke-dasharray="60, 100" fill="none"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="text-xl font-semibold text-green-600">60%</span>
+            </div>
+          </div>
+
+          <!-- Student Info -->
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold mb-4 text-blue-600">Student Information</h3>
+            <ul class="space-y-2 text-gray-700 text-sm">
+              <li><strong>Name:</strong> Juan Dela Cruz</li>
+              <li><strong>Student ID:</strong> 20251234</li>
+              <li><strong>Program:</strong> BS Computer Science</li>
+              <li><strong>Year Level:</strong> 2nd Year</li>
+              <li><strong>Section:</strong> BSCS 2-B</li>
+              <li><strong>Address:</strong> Quezon City, Philippines</li>
+              <li><strong>Contact:</strong> 09123456789</li>
+              <li><strong>Parent's Name:</strong> Maria Dela Cruz</li>
+              <li><strong>Parent's Contact:</strong> 0987654321</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Access Sections -->
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <a href="announcements.html" class="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
+          <h4 class="text-lg font-semibold text-blue-600 mb-2">Latest Announcements</h4>
+          <ul class="text-gray-700 text-sm space-y-1">
+            <li>- Midterm exams schedule posted</li>
+            <li>- Holiday on June 12</li>
+            <li>- Campus clean-up drive this weekend</li>
+          </ul>
+        </a>
+
+        <a href="timetable.html" class="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
+          <h4 class="text-lg font-semibold text-blue-600 mb-2">Today's Timetable</h4>
+          <ul class="text-gray-700 text-sm space-y-1">
+            <li>8:00 AM - Data Structures</li>
+            <li>10:00 AM - Web Dev Lab</li>
+            <li>1:00 PM - Math 2</li>
+          </ul>
+        </a>
+
+        <a href="enrollment.html" class="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
+          <h4 class="text-lg font-semibold text-blue-600 mb-2">Enrollment Status</h4>
+          <p class="text-gray-700 text-sm">Enrolled for Semester 1, AY 2025–2026</p>
+          <p class="text-green-600 font-semibold mt-2">Status: Confirmed</p>
+        </a>
+
+        <a href="grades.html" class="bg-white rounded-xl shadow p-6 hover:shadow-md transition">
+          <h4 class="text-lg font-semibold text-blue-600 mb-2">Grades</h4>
+          <ul class="text-gray-700 text-sm space-y-1">
+            <li>Data Structures: A</li>
+            <li>Math 2: B+</li>
+            <li>Web Dev Lab: A-</li>
+          </ul>
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 shadow mt-8">
+      &copy; 2025 College Name. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+</body>
+</html>

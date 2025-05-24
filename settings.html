@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Settings - Admin Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Settings</h1>
+    <a href="admin-dashboard.html" class="bg-white text-blue-700 px-4 py-2 rounded hover:bg-gray-200 transition">Back to Dashboard</a>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow p-6 max-w-4xl mx-auto w-full">
+    <section class="bg-white rounded-lg shadow p-6 mb-6">
+      <h2 class="text-2xl font-semibold mb-4">Profile Settings</h2>
+      <form class="space-y-4">
+        <div>
+          <label for="adminName" class="block text-gray-700 font-medium mb-1">Admin Name</label>
+          <input type="text" id="adminName" placeholder="Enter your name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label for="adminEmail" class="block text-gray-700 font-medium mb-1">Email Address</label>
+          <input type="email" id="adminEmail" placeholder="admin@example.com" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Save Changes</button>
+      </form>
+    </section>
+
+    <section class="bg-white rounded-lg shadow p-6 mb-6">
+      <h2 class="text-2xl font-semibold mb-4">Change Password</h2>
+      <form class="space-y-4">
+        <div>
+          <label for="currentPassword" class="block text-gray-700 font-medium mb-1">Current Password</label>
+          <input type="password" id="currentPassword" placeholder="********" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label for="newPassword" class="block text-gray-700 font-medium mb-1">New Password</label>
+          <input type="password" id="newPassword" placeholder="********" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label for="confirmPassword" class="block text-gray-700 font-medium mb-1">Confirm New Password</label>
+          <input type="password" id="confirmPassword" placeholder="********" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Update Password</button>
+      </form>
+    </section>
+
+    <section class="bg-white rounded-lg shadow p-6">
+      <h2 class="text-2xl font-semibold mb-4">Notification Preferences</h2>
+      <form class="space-y-4">
+        <div class="flex items-center">
+          <input type="checkbox" id="emailNotifications" class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
+          <label for="emailNotifications" class="ml-2 block text-gray-700 font-medium">Email Notifications</label>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="smsNotifications" class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
+          <label for="smsNotifications" class="ml-2 block text-gray-700 font-medium">SMS Notifications</label>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="pushNotifications" class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
+          <label for="pushNotifications" class="ml-2 block text-gray-700 font-medium">Push Notifications</label>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Save Preferences</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

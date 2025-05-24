@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grades - Student Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Progress circle styling */
+    .progress-ring__circle {
+      transition: 0.35s stroke-dashoffset;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="bg-blue-600 text-white w-64 p-6 space-y-4 hidden md:block fixed md:relative z-20 h-full">
+    <h2 class="text-2xl font-bold mb-6">Student Portal</h2>
+    <nav class="space-y-2">
+      <a href="dashboard.html" class="block py-2 px-3 rounded hover:bg-blue-500">Dashboard</a>
+      <a href="announcements.html" class="block py-2 px-3 rounded hover:bg-blue-500">Announcements</a>
+      <a href="enrollment.html" class="block py-2 px-3 rounded hover:bg-blue-500">Enrollment</a>
+      <a href="timetable.html" class="block py-2 px-3 rounded hover:bg-blue-500">Timetable</a>
+      <a href="grades.html" class="block py-2 px-3 rounded bg-blue-700 font-semibold">Grades</a>
+      <div class="group relative">
+        <button class="block py-2 px-3 rounded hover:bg-blue-500 w-full text-left">Student Account</button>
+        <div class="absolute bg-white text-black mt-1 left-0 shadow-md rounded hidden group-hover:block z-10 w-48">
+          <div class="px-4 py-2 border-b">
+            <strong>Juan Dela Cruz</strong><br>
+            <span class="text-sm text-gray-600">BSCS 2-B</span>
+          </div>
+          <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">View Profile</a>
+          <a href="edit-profile.html" class="block px-4 py-2 hover:bg-gray-100">Edit Profile</a>
+        </div>
+      </div>
+      <a href="index.html" class="block bg-white text-blue-600 px-3 py-2 rounded hover:bg-gray-100 mt-2">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 ml-0 md:ml-64">
+    <!-- Toggle Button for Sidebar -->
+    <div class="md:hidden flex items-center justify-between bg-blue-600 text-white px-4 py-3 shadow-md">
+      <h1 class="text-xl font-bold">Grades</h1>
+      <button onclick="document.getElementById('sidebar').classList.toggle('hidden')" class="text-white focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Page Content -->
+    <main class="p-6 max-w-6xl mx-auto space-y-8">
+      <h2 class="text-3xl font-bold text-blue-700 text-center mb-6">Grades Overview</h2>
+
+      <!-- Grades Grid -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Data Structures -->
+        <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition flex flex-col items-center">
+          <h3 class="font-semibold text-lg text-blue-600 mb-4">Data Structures</h3>
+          <div class="relative w-24 h-24 mb-2">
+            <svg class="w-24 h-24" viewBox="0 0 120 120">
+              <circle
+                class="text-gray-200"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+              />
+              <circle
+                class="progress-ring__circle text-green-500"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+                stroke-dasharray="326.7256"
+                stroke-dashoffset="40" 
+              />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-2xl font-bold text-green-600">1.25</span>
+              <span class="text-sm text-gray-600">A-</span>
+            </div>
+          </div>
+          <p class="text-gray-700 text-xl font-semibold">Very Good</p>
+        </div>
+
+        <!-- Math 2 -->
+        <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition flex flex-col items-center">
+          <h3 class="font-semibold text-lg text-blue-600 mb-4">Math 2</h3>
+          <div class="relative w-24 h-24 mb-2">
+            <svg class="w-24 h-24" viewBox="0 0 120 120">
+              <circle
+                class="text-gray-200"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+              />
+              <circle
+                class="progress-ring__circle text-green-500"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+                stroke-dasharray="326.7256"
+                stroke-dashoffset="65" 
+              />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-2xl font-bold text-green-600">1.75</span>
+              <span class="text-sm text-gray-600">B</span>
+            </div>
+          </div>
+          <p class="text-gray-700 text-xl font-semibold">Above Average</p>
+        </div>
+
+        <!-- Web Dev Lab -->
+        <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition flex flex-col items-center">
+          <h3 class="font-semibold text-lg text-blue-600 mb-4">Web Dev Lab</h3>
+          <div class="relative w-24 h-24 mb-2">
+            <svg class="w-24 h-24" viewBox="0 0 120 120">
+              <circle
+                class="text-gray-200"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+              />
+              <circle
+                class="progress-ring__circle text-green-500"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+                stroke-dasharray="326.7256"
+                stroke-dashoffset="80" 
+              />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-2xl font-bold text-green-600">2.0</span>
+              <span class="text-sm text-gray-600">C</span>
+            </div>
+          </div>
+          <p class="text-gray-700 text-xl font-semibold">Passing</p>
+        </div>
+
+        <!-- Computer Networks -->
+        <div class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition flex flex-col items-center">
+          <h3 class="font-semibold text-lg text-blue-600 mb-4">Computer Networks</h3>
+          <div class="relative w-24 h-24 mb-2">
+            <svg class="w-24 h-24" viewBox="0 0 120 120">
+              <circle
+                class="text-gray-200"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+              />
+              <circle
+                class="progress-ring__circle text-red-500"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+                stroke-dasharray="326.7256"
+                stroke-dashoffset="200" 
+              />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <span class="text-2xl font-bold text-red-600">5.0</span>
+              <span class="text-sm text-gray-600">F</span>
+            </div>
+          </div>
+          <p class="text-gray-700 text-xl font-semibold">Fail</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 shadow mt-8">
+      &copy; 2025 College Name. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enrollment - Student Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside id="sidebar" 
+    class="bg-blue-600 text-white w-64 p-6 space-y-4 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 md:relative md:translate-x-0 transition-transform duration-300 ease-in-out z-20">
+    <h2 class="text-2xl font-bold mb-6">Student Portal</h2>
+    <nav class="space-y-2">
+      <a href="dashboard.html" class="block py-2 px-3 rounded hover:bg-blue-500">Dashboard</a>
+      <a href="announcements.html" class="block py-2 px-3 rounded hover:bg-blue-500">Announcements</a>
+      <a href="enrollment.html" class="block py-2 px-3 rounded bg-blue-700 font-semibold">Enrollment</a>
+      <a href="timetable.html" class="block py-2 px-3 rounded hover:bg-blue-500">Timetable</a>
+      <a href="grades.html" class="block py-2 px-3 rounded hover:bg-blue-500">Grades</a>
+      <!-- Student Account Dropdown -->
+      <div class="group relative">
+        <button class="block py-2 px-3 rounded hover:bg-blue-500 w-full text-left">Student Account</button>
+        <div class="absolute bg-white text-black mt-1 left-0 shadow-md rounded hidden group-hover:block z-10 w-48">
+          <div class="px-4 py-2 border-b">
+            <strong>Juan Dela Cruz</strong><br>
+            <span class="text-sm text-gray-600">BSCS 2-B</span>
+          </div>
+          <a href="profile.html" class="block px-4 py-2 hover:bg-gray-100">View Profile</a>
+          <a href="edit-profile.html" class="block px-4 py-2 hover:bg-gray-100">Edit Profile</a>
+        </div>
+      </div>
+      <a href="index.html" class="block bg-white text-blue-600 px-3 py-2 rounded hover:bg-gray-100 mt-2">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 ml-0 md:ml-64 flex flex-col min-h-screen">
+    <!-- Toggle Button for Sidebar (Mobile) -->
+    <div class="md:hidden flex items-center justify-between bg-blue-600 text-white px-4 py-3 shadow-md">
+      <h1 class="text-xl font-bold">Enrollment</h1>
+      <button 
+        onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')" 
+        class="text-white focus:outline-none"
+        aria-label="Toggle Sidebar"
+      >
+        &#9776;
+      </button>
+    </div>
+
+    <!-- Page Content -->
+    <main class="p-6 max-w-6xl mx-auto space-y-8 flex-grow">
+      <h2 class="text-3xl font-bold text-blue-700 text-center">Enrollment Status</h2>
+
+      <section class="bg-white p-6 rounded shadow max-w-xl mx-auto">
+        <p class="text-gray-700 text-lg mb-4">You are currently enrolled for Semester 1, Academic Year 2025–2026.</p>
+        <p class="text-green-600 font-semibold text-lg">Status: Confirmed</p>
+      </section>
+
+      <section class="bg-white p-6 rounded shadow max-w-xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-4 text-blue-600">Enrollment Details</h3>
+        <ul class="text-gray-700 space-y-2 text-sm">
+          <li><strong>Student ID:</strong> 20251234</li>
+          <li><strong>Name:</strong> Juan Dela Cruz</li>
+          <li><strong>Program:</strong> BS Computer Science</li>
+          <li><strong>Year Level:</strong> 2nd Year</li>
+          <li><strong>Section:</strong> BSCS 2-B</li>
+          <li><strong>Enrollment Date:</strong> May 10, 2025</li>
+          <li><strong>Courses Enrolled:</strong></li>
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li><strong>Major:</strong> Data Structures <span class="text-gray-500">(3 units)</span></li>
+            <li><strong>Major:</strong> Web Development Lab <span class="text-gray-500">(2 units)</span></li>
+            <li><strong>Minor:</strong> Math 2 <span class="text-gray-500">(3 units)</span></li>
+          </ul>
+          <li class="mt-2"><strong>Total Units:</strong> 8</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 shadow mt-auto">
+      &copy; 2025 College Name. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>

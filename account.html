@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account - Student Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex">
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-blue-700 text-white shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-30">
+    <div class="p-6 flex flex-col h-full">
+      <h2 class="text-2xl font-bold mb-8">Student Portal</h2>
+      <nav class="flex flex-col space-y-4 flex-grow">
+        <a href="dashboard.html" class="py-2 px-4 rounded hover:bg-blue-900">Dashboard</a>
+        <a href="announcements.html" class="py-2 px-4 rounded hover:bg-blue-900">Announcements</a>
+        <a href="enrollment.html" class="py-2 px-4 rounded hover:bg-blue-900">Enrollment</a>
+        <a href="timetable.html" class="py-2 px-4 rounded hover:bg-blue-900">Timetable</a>
+        <a href="grades.html" class="py-2 px-4 rounded hover:bg-blue-900">Grades</a>
+        <a href="account.html" class="py-2 px-4 rounded bg-blue-900 font-semibold">Student Account</a>
+      </nav>
+      <div class="mt-auto pt-6 border-t border-blue-600">
+        <div class="flex items-center space-x-3">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile" class="w-12 h-12 rounded-full border-2 border-white object-cover" />
+          <div>
+            <p class="font-semibold">Juan Dela Cruz</p>
+            <p class="text-sm text-blue-300">BSCS 2-B</p>
+          </div>
+        </div>
+        <a href="index.html" class="block mt-4 bg-white text-blue-700 text-center py-2 rounded hover:bg-gray-100 font-semibold">Logout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="flex flex-col flex-1 min-h-screen md:ml-64">
+
+    <!-- Top Navbar -->
+    <header class="bg-blue-600 text-white flex items-center justify-between px-4 py-3 shadow-md md:hidden">
+      <button id="sidebarToggle" class="text-white focus:outline-none" aria-label="Toggle sidebar">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <h1 class="text-xl font-bold">Student Portal</h1>
+      <div></div>
+    </header>
+
+    <!-- Account Content -->
+    <main class="flex-grow p-6 max-w-4xl mx-auto space-y-8">
+      <h2 class="text-3xl font-bold text-blue-700 text-center mb-6">Edit Profile</h2>
+
+      <form class="bg-white rounded shadow p-6 space-y-6" id="profileForm">
+        <div class="flex flex-col items-center">
+          <img
+            src="https://randomuser.me/api/portraits/men/75.jpg"
+            alt="Profile Picture"
+            class="w-32 h-32 rounded-full border-4 border-blue-500 object-cover shadow mb-4"
+            id="profileImage"
+          />
+          <input type="file" id="profilePicInput" accept="image/*" class="hidden" />
+          <button type="button" id="changePicBtn" class="text-blue-600 hover:underline">Change Picture</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="fullName" class="block text-gray-700 font-semibold mb-1">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              value="Juan Dela Cruz"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="studentId" class="block text-gray-700 font-semibold mb-1">Student ID</label>
+            <input
+              type="text"
+              id="studentId"
+              name="studentId"
+              value="20251234"
+              disabled
+              class="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100 cursor-not-allowed"
+            />
+          </div>
+
+          <div>
+            <label for="program" class="block text-gray-700 font-semibold mb-1">Program</label>
+            <input
+              type="text"
+              id="program"
+              name="program"
+              value="BS Computer Science"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="yearLevel" class="block text-gray-700 font-semibold mb-1">Year Level</label>
+            <select
+              id="yearLevel"
+              name="yearLevel"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="1">1st Year</option>
+              <option value="2" selected>2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="section" class="block text-gray-700 font-semibold mb-1">Section</label>
+            <input
+              type="text"
+              id="section"
+              name="section"
+              value="BSCS 2-B"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="address" class="block text-gray-700 font-semibold mb-1">Address</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value="Quezon City, Philippines"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="contact" class="block text-gray-700 font-semibold mb-1">Contact Number</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              value="09123456789"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="parentName" class="block text-gray-700 font-semibold mb-1">Parent's Name</label>
+            <input
+              type="text"
+              id="parentName"
+              name="parentName"
+              value="Maria Dela Cruz"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="parentContact" class="block text-gray-700 font-semibold mb-1">Parent's Contact</label>
+            <input
+              type="tel"
+              id="parentContact"
+              name="parentContact"
+              value="0987654321"
+              required
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="bg-blue-600 text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 transition"
+          >
+            Save Changes
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 shadow mt-8">
+      &copy; 2025 College Name. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+
+    // Profile picture change logic
+    const profilePicInput = document.getElementById('profilePicInput');
+    const profileImage = document.getElementById('profileImage');
+    const changePicBtn = document.getElementById('changePicBtn');
+
+    changePicBtn.addEventListener('click', () => {
+      profilePicInput.click();
+    });
+
+    profilePicInput.addEventListener('change', () => {
+      const file = profilePicInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          profileImage.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Optional: form submit handler
+    document.getElementById('profileForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Profile changes saved!');
+      // Here you can add actual save logic like sending data to backend
+    });
+  </script>
+</body>
+</html>
